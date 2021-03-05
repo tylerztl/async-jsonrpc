@@ -18,8 +18,8 @@ pub struct HttpTransport {
 impl HttpTransport {
     fn new_client() -> reqwest::Client {
         reqwest::Client::builder()
-            .connect_timeout(Duration::from_secs(10))
-            .timeout(Duration::from_secs(30))
+            .connect_timeout(Duration::from_secs(60))
+            .timeout(Duration::from_secs(120))
             .build()
             .expect("ClientBuilder config is valid; qed")
     }
